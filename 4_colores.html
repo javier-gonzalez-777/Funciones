@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+
+<body>
+    <div id="cuadrado1"style="height: 200px; width: 200px; background-color: blue"></div>
+    <div id="cuadrado2"style="height: 200px; width: 200px; background-color: red" ></div>
+    <div id="cuadrado3"style="height: 200px; width: 200px; background-color: green"></div>
+    <div id="cuadrado4"style="height: 200px; width: 200px; background-color: yellow"></div>
+    <div id="key"style="height: 200px;width: 200px; background-color: white; border: 1px solid black;"></div>
+    <div id="Giuli" style="height: 200px; width: 200px"></div>    
+
+    <script>
+        // elementos del DOM
+  
+        const cuadrado1 = document.getElementById("cuadrado1");
+        const cuadrado2 = document.getElementById("cuadrado2");
+        const cuadrado3 = document.getElementById("cuadrado3");
+        const cuadrado4 = document.getElementById("cuadrado4");
+        const llave = document.getElementById("key");
+        const child = document.getElementById("Giuli");
+  
+        // Variables
+        let color = "white";
+        // Funciones
+        const makesquare = () => {
+          let container = document.querySelector("body");
+          let newsquare = document.createElement("div");
+          newsquare.style.width = "200px";
+          newsquare.style.height = "200px";
+          newsquare.style.backgroundColor = colors;
+          container.appendChild(newsquare);
+        };
+        // Eventos
+  
+        cuadrado1.addEventListener("click", () => {
+        cuadrado1.style.backgroundColor = "black";
+        });
+  
+        cuadrado2.addEventListener("click", () => {
+        cuadrado2.style.backgroundColor = "black";
+        });
+  
+        cuadrado3.addEventListener("click", () => {
+        cuadrado3.style.backgroundColor = "black";
+        });
+  
+        cuadrado4.addEventListener("click", () => {
+        cuadrado4.style.backgroundColor = "black";
+        });
+  
+        // Al presionar una tecla cambiar color
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "a") {
+            colors = "pink";
+            key.style.backgroundColor = colors;
+          } else if (event.key === "s") {
+            colors = "orange";
+            key.style.backgroundColor = colors;
+          } else if (event.key === "d") {
+            colors = "lightblue";
+            key.style.backgroundColor = colors;
+          }
+        });
+       // Al presionar una combinacion de teclas 
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "q") {
+            colors = "purple";
+            makesquare();
+          } else if (event.key === "w") {
+            colors = "grey";
+            makesquare();
+          } else if (event.key === "e") {
+            colors = "brown";
+            makesquare();
+          }
+        });
+      </script>
+
+</body>
+
+</html>
